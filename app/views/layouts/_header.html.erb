@@ -29,9 +29,9 @@
       </ul>
       <% if user_signed_in? %>
         <%= current_user.email %>
-        <%= link_to 'Sign out', destroy_user_session_path, class: "btn", data: { turbo_method: :delete } %>
+        <%= link_to 'Sign out', destroy_user_session_path, class: "btn btn-danger", data: { turbo_method: :delete } %>
       <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+        <%= link_to 'Register', new_user_registration_path, class: "btn btn-primary" %> or <%= link_to 'Sign in', new_user_session_path, class: "btn btn-secondary" %>
       <% end %>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -29,6 +29,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "letter_opener_web"
   gem "rack-mini-profiler"
   gem "rubocop", require: false
   gem "rubocop-capybara", require: false
