@@ -18,6 +18,7 @@ gem "bootsnap", require: false
 gem "devise"
 gem "tzinfo-data", platforms: %i[windows jruby]
 # gem "image_processing", "~> 1.2"
+gem "kaminari"
 
 group :development, :test do
   gem "database_cleaner"
