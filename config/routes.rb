@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-
+  
   resources :comments
   resources :tasks
   resources :projects
-  devise_for :users
+  devise_for :users, controllers: {
+    confirmations: "users/confirmations" ,
+    passwords: "users/passwords",
+    registrations: "users/registrations",
+    sessions: "users/sessions",
+    unlocks: "users/unlocks"
+  }
+  
+  get 'users/list'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
